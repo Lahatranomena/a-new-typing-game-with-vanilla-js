@@ -1,4 +1,18 @@
 
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+:root {
+    --p-color1 : #f3cdc8;
+    --p-color2 : #31294C;
+	--p-color3: #fff;
+    --p-secondary : #f5f423;
+    --p-primary :  #92927D;
+    --p-tertiary : #Bfacc8;
+}
+
 nav {
     padding: 0.5rem;
     box-sizing: border-box;
@@ -18,7 +32,7 @@ nav ul {
 }
 
 nav a {
-    color: #353839;
+    color: var(--p-color2);
     text-decoration: none;
     font-weight: bold;
     box-shadow: rgb(167, 167, 167) 3px 3px 3px;
@@ -30,20 +44,110 @@ nav a {
     width: 2rem;
 }
 h1 {
-    color: #645394;
-    font-size: 2rem;
+    color: var(--p-secondary);
+    font-size: 30px;
+    font-family: 'Calibri',  sans-serif;
 }
 
-.title {
+.logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
 }
 
-.title img {
-    width: 4rem;
-    height: 4rem;
-    color: #848482;
+.logo img {
+    width: 30px;
+    height: 30px;
+    color: var(--p-color3);
     opacity: 0.7;
+}
+
+.boutton {
+	display: flex;
+	gap: 20px;
+	
+}
+.boutton .login {
+	height: 40px;
+	width: 100px;
+	margin-top: 20px;
+	padding: 10px;
+	background: transparent;
+	border-color: 20px bisque;
+	border-radius: 20px;
+	&:hover {
+		background-color: white;
+		color: violet;
+		border: 2px solid gold;
+	}
+}
+.boutton .sign {
+	height: 40px;
+	width: 100px;
+	margin-top: 20px;
+	padding: 10px;
+	background:  orange;
+	border-color: 20px bisque;
+	border-radius: 20px;
+	&:hover {
+		background-color: white;
+		color: violet;
+		border: 2px solid gold;
+	}
+}
+body.light-mode {
+    background-color: #f9f9f9;
+}
+
+body.light-mode .content {
+    background-color: #fff;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+}
+
+
+#toggle-mode {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent; 
+    color: inherit; 
+    position: relative;
+    overflow: hidden; 
+    line-height: 1; 
+}
+
+.white-icon, .black-icon {
+    font-size: 1.5rem; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+	border: none;
+}
+
+.white-icon {
+    opacity: 1; 
+}
+
+.black-icon {
+    opacity: 0; 
+}
+
+body.dark-mode .sun-icon {
+    opacity: 0;
+}
+
+body.dark-mode .moon-icon {
+    opacity: 1;
 }
