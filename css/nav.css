@@ -44,18 +44,27 @@ nav a {
     width: 2rem;
 }
 h1 {
+<<<<<<< HEAD
     color: var(--p-secondary);
     font-size: 30px;
     font-family: 'Calibri',  sans-serif;
 }
 
 .logo {
+=======
+    color: #645394;
+    font-size: 2rem;
+}
+
+.title {
+>>>>>>> 3cf898de88e51e100a2c5862e24250036e56f24c
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
 }
 
+<<<<<<< HEAD
 .logo img {
     width: 30px;
     height: 30px;
@@ -150,4 +159,11 @@ body.dark-mode .sun-icon {
 
 body.dark-mode .moon-icon {
     opacity: 1;
+=======
+.title img {
+    width: 4rem;
+    height: 4rem;
+    color: #848482;
+    opacity: 0.7;
+>>>>>>> 3cf898de88e51e100a2c5862e24250036e56f24c
 }
