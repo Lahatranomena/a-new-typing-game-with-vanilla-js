@@ -33,3 +33,17 @@ h1 {
     color: #645394;
     font-size: 2rem;
 }
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.title img {
+    width: 4rem;
+    height: 4rem;
+    color: #848482;
+    opacity: 0.7;
+}
