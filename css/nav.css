@@ -104,7 +104,6 @@ body.light-mode .content {
     background-color: #fff;
 }
 
-/* Styles pour le mode sombre */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #f0f0f0;
@@ -114,22 +113,21 @@ body.dark-mode .content {
     background-color: #333;
 }
 
-/* Style du bouton */
 
 #toggle-mode {
     padding: 10px 15px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: transparent; /* Fond transparent pour laisser voir l'icône */
-    color: inherit; /* Hérite de la couleur du texte (qui sera celle de l'icône) */
-    position: relative; /* Pour positionner les icônes */
-    overflow: hidden; /* Empêche le texte de déborder si jamais */
-    line-height: 1; /* Ajuste la hauteur de ligne pour les icônes */
+    background-color: transparent; 
+    color: inherit; 
+    position: relative;
+    overflow: hidden; 
+    line-height: 1; 
 }
 
-.sun-icon, .moon-icon {
-    font-size: 1.5rem; /* Taille des icônes */
+.white-icon, .black-icon {
+    font-size: 1.5rem; 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -138,15 +136,14 @@ body.dark-mode .content {
 	border: none;
 }
 
-.sun-icon {
-    opacity: 1; /* Visible par défaut (mode clair) */
+.white-icon {
+    opacity: 1; 
 }
 
-.moon-icon {
-    opacity: 0; /* Caché par défaut */
+.black-icon {
+    opacity: 0; 
 }
 
-/* Afficher la lune et cacher le soleil en mode sombre */
 body.dark-mode .sun-icon {
     opacity: 0;
 }

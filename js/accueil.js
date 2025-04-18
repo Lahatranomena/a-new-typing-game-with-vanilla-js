@@ -23,5 +23,10 @@ toggleButton.addEventListener('click', () => {
         body.classList.add(darkModeClass);
         localStorage.setItem('theme', darkModeClass);
     }
+	if (body.classList.contains(darkModeClass)) {
+    
+	} else {
+		
+	}
 });
 
