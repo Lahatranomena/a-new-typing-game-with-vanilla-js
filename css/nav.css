@@ -66,6 +66,7 @@ h1 {
 .boutton {
 	display: flex;
 	gap: 20px;
+    margin-left: 80px;
 	
 }
 .boutton .login {
