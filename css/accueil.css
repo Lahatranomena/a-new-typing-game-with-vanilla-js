@@ -5,17 +5,21 @@
 }
 
 :root {
-    --p-primary: #F7E7CE;
-    --p-secondary: #C19A6B;
+    :root {
+		--p-primary: #F7E7CE;
+		--p-secondary: #C19A6B;
+		--p-color1: white;
+		--p-color2: #3D2B1F;
+	  }
   }
 body {
     animation: color-cycle 15s infinite alternate;
 }
 
 @keyframes color-cycle {
-    0% { background-color: black; }
+    0% { background-color: var(--p-primary); }
     50% { background-color: white; }
-    100% { background-color: rgb(206, 206, 231); }
+    100% { background-color: var(--p-color2); }
 }
   
 .container {
