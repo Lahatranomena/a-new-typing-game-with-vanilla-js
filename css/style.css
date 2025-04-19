@@ -5,12 +5,10 @@
   }
 
   :root {
-    --p-color1: white;
-    --p-color2: black;
-    --p-primary: #BFACC8;
-    --p-secondary: #4A4063;
-    --p-tertiary: --#C8C6D7;
+    --p-primary: #F7E7CE;
+    --p-secondary: #C19A6B;
   }
+  
 body {
     font-family: "Roboto", sans-serif;
     background-image: url(../img/baymax.png);

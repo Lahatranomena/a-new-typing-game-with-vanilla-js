@@ -28,14 +28,14 @@ nav a {
     font-weight: bold;
     box-shadow: rgb(167, 167, 167) 3px 3px 3px;
     background-color: white;
-    border: 1px solid #848482;
+    border: 1px solid var(--p-secondary);
     margin: 0.5rem 1rem;
     padding: 0.5rem 3rem;
     border-radius: 0.5rem;
     width: 2rem;
 }
 h1 {
-    color: #645394;
+    color: var(--p-secondary);
     font-size: 2rem;
 }
 
