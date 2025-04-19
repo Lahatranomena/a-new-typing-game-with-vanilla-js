@@ -11,7 +11,7 @@ if (form) {
         }
         setTimeout(chargement,1000)
       function callpage() {
-        window.open('../html/index.html')
+        window.open('../html/test.html')
       }
       setTimeout(callpage, 1000)
     }

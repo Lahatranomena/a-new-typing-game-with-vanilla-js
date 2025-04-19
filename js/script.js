@@ -130,7 +130,7 @@ const updateLiveInputHighlight = () => {
   for (let i = 0; i < letterSpans.length; i++) {
     if (i < typed.length) {
       if (typed[i] === letterSpans[i].textContent) {
-        letterSpans[i].style.color = "#C19A6B"; // Lettre correcte
+        letterSpans[i].style.color = "green"; // Lettre correcte
       } else {
         letterSpans[i].style.color = "red"; // Lettre incorrecte
       }

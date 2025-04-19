@@ -4,18 +4,22 @@
 	box-sizing: border-box;
 }
 
-:root {
-    --p-primary: #F7E7CE;
-    --p-secondary: #C19A6B;
-  }
+    :root {
+		--p-primary: #F7E7CE;
+		--p-secondary: #C19A6B;
+		--p-color1: white;
+		--p-color2: #3D2B1F;
+	  }
+
 body {
-    animation: color-cycle 15s infinite alternate;
+    animation: color-cycle 10s infinite alternate;
+	font-family: "Roboto", sans-serif;
 }
 
 @keyframes color-cycle {
-    0% { background-color: black; }
-    50% { background-color: white; }
-    100% { background-color: rgb(206, 206, 231); }
+    0% { background-color: var(--p-secondary); }
+	50% {background-color: var(--p-color1)}
+    100% { background-color: var(--p-primary); }
 }
   
 .container {
@@ -30,10 +34,10 @@ body {
 	width: 50%;
 }
 .description h1 {
-	color: var(--p-secondary);
+	color: var(--p-color2);
 	gap: 100px;
 	font-size: 60px;
-	margin: 50px;
+	margin: 70px;
 }
   
   .description {
@@ -64,13 +68,14 @@ body {
 	font-size: 20px;
 	&:hover {
 		background-color: var(--p-primary);
-		color: var(--p-color1);
-		border: 2px solid black;
+		color: var(--p-primary);
+		border: 2px solid var(--p-color2);
 	}
 }
 .description a {
 	text-decoration: none;
 	margin: auto;
+	color: var(--p-color2);
 }
 
 .images {
@@ -85,5 +90,21 @@ body {
 	padding-top: 100px;
 	padding: 10px;
 	margin-left: 100px;
-	
+	animation-name: uptodown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+
 }
+@keyframes uptodown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-2vh);
+    }
+}
+
+
+
