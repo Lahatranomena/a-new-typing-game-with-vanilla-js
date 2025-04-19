@@ -95,6 +95,10 @@ const updateWord = (event) => {
     if (currentWordIndex >= wordsToType.length) {
       results.textContent += " Test terminé !";
       inputField.disabled = true;
+      // Option 1: Recharger la page après 2 secondes
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
     }
   }
 };

@@ -5,11 +5,8 @@
 }
 
 :root {
-    --p-color1: white;
-    --p-color2: black;
-    --p-primary: #d6adca;
-    --p-secondary: #4A4063;
-    --p-tertiary: --#C8C6D7;
+    --p-primary: #F7E7CE;
+    --p-secondary: #C19A6B;
   }
 body {
     animation: color-cycle 15s infinite alternate;
@@ -33,7 +30,7 @@ body {
 	width: 50%;
 }
 .description h1 {
-	color: rgb(217, 94, 94);
+	color: var(--p-secondary);
 	gap: 100px;
 	font-size: 60px;
 	margin: 50px;
