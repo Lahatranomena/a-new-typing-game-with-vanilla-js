@@ -11,21 +11,50 @@
     --p-secondary: #4A4063;
     --p-tertiary: --#C8C6D7;
   }
+body {
+    animation: color-cycle 15s infinite alternate;
+}
+
+@keyframes color-cycle {
+    0% { background-color: black; }
+    50% { background-color: white; }
+    100% { background-color: rgb(206, 206, 231); }
+}
   
 .container {
 	width: 100%;
 	display: flex;
 	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+	width: 100%; 
 }
 .description {
 	width: 50%;
 }
 .description h1 {
-	color: var(--p-secondary);
+	color: rgb(217, 94, 94);
 	gap: 100px;
 	font-size: 60px;
 	margin: 50px;
 }
+  
+  .description {
+	transform: translateX(-100%); 
+	opacity: 0; 
+	animation: slideInFromLeft 1s ease-out 0.5s forwards; 
+  }
+  
+  @keyframes slideInFromLeft {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
 .description .btn {
 	margin: 50px;
 	height: 80px;
