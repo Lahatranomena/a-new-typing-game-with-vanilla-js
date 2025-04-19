@@ -6,7 +6,7 @@
 
   :root {
     --p-primary: #F7E7CE;
-    --p-secondary: #C19A6B;
+    --p-secondary: #CDB280;
     --p-color1: white;
     --p-color2: #3D2B1F;
   }
@@ -25,7 +25,7 @@ p {
     width: 20vw;
     height: 70vh;
     border: 1px solid var(--p-primary);
-    box-shadow: rgb(218, 218, 218) 5px 5px 5px;
+    box-shadow: rgb(191, 191, 191) 5px 5px 5px;
     background-color: var(--p-primary);
     border-radius: 1rem;
     text-align: center;
@@ -39,7 +39,12 @@ article:hover {
   .card img {
     width: 10rem;
     height: auto;
-    padding-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
+  }
+  span p {
+    color: var(--p-color2);
+    font-size: 1.1rem;
+    text-align: center;
   }

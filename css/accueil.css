@@ -4,20 +4,20 @@
 	box-sizing: border-box;
 }
 
-:root {
     :root {
 		--p-primary: #F7E7CE;
 		--p-secondary: #C19A6B;
 		--p-color1: white;
 		--p-color2: #3D2B1F;
 	  }
-  }
+
 body {
     animation: color-cycle 10s infinite alternate;
 }
 
 @keyframes color-cycle {
     0% { background-color: var(--p-secondary); }
+	50% {background-color: var(--p-color1)}
     100% { background-color: var(--p-primary); }
 }
   
@@ -88,5 +88,21 @@ body {
 	padding-top: 100px;
 	padding: 10px;
 	margin-left: 100px;
-	
+	animation-name: uptodown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+
 }
+@keyframes uptodown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-2vh);
+    }
+}
+
+
+

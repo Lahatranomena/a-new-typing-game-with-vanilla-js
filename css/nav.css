@@ -30,7 +30,7 @@ nav a {
     font-weight: bold;
     box-shadow: rgb(167, 167, 167) 3px 3px 3px;
     background-color: white;
-    border: 1px solid var(--p-secondary);
+    border: 1px solid var(--p-primary);
     margin: 0.5rem 1rem;
     padding: 0.5rem 3rem;
     border-radius: 0.5rem;
@@ -38,7 +38,7 @@ nav a {
 }
 h1 {
     color: var(--p-color2);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .logo {
