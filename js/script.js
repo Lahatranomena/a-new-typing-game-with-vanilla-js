@@ -6,21 +6,19 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
-const restartButton = document.getElementById("restart-button"); // Récupérer le bouton
-
+const restartButton = document.getElementById("restart-button"); 
 const words = {
   easy: ["apple ", "banana ", "grape ", "orange ", "cherry "],
   medium: ["keyboard ", "monitor ", "printer ", "charger  ", "battery "],
   hard: ["synchronize ", "complicated ", "development ", "extravagant ", "misconception "]
 };
 
-// Génère un mot aléatoire en fonction du mode sélectionné
+
 const getRandomWord = (mode) => {
   const wordList = words[mode];
   return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
-// Initialise le test de frappe
 const startTest = (wordCount = 20) => {
   wordsToType.length = 0;
   wordDisplay.innerHTML = "";
@@ -36,8 +34,8 @@ const startTest = (wordCount = 20) => {
 
   wordsToType.forEach((word, index) => {
     const span = document.createElement("span");
-    span.textContent = word + " "; // L'espace est important ici
-    if (index === 0) span.style.color = "red"; // Premier mot mis en évidence
+    span.textContent = word + " "; 
+    if (index === 0) span.style.color = "red";
     wordDisplay.appendChild(span);
   });
 
@@ -45,14 +43,14 @@ const startTest = (wordCount = 20) => {
   inputField.value = "";
 };
 
-// Démarre le chronomètre dès que l'utilisateur commence à taper
+
 const startTimer = () => {
   if (!startTime) startTime = Date.now();
 };
 
-// Calcule et retourne le WPM et la précision
+
 const getCurrentStats = () => {
-  const elapsedTime = (Date.now() - startTime) / 1000; // secondes
+  const elapsedTime = (Date.now() - startTime) / 1000; 
   const totalCharsTyped = wordsToType
     .slice(0, currentWordIndex + 1)
     .reduce((sum, word) => sum + word.length, 0);
@@ -74,12 +72,12 @@ const getCurrentStats = () => {
   };
 };
 
-// Fonction pour réinitialiser l'état du test
+
 const resetTest = () => {
-  startTest(); // Simplement relancer startTest pour un nouveau test
+  startTest(); 
 };
 
-// Passe au mot suivant dès que l'utilisateur appuie sur espace
+
 const updateWord = (event) => {
   if (event.key === " ") {
     event.preventDefault();
@@ -89,23 +87,22 @@ const updateWord = (event) => {
     const expected = wordsToType[currentWordIndex];
     const typed = inputField.value.trim();
 
-    const feedback = typed === expected ? " Mot correct !" : " Mot incorrect";
+    const feedback = typed === expected ? " Correct Word !" : " Incorrect Word";
 
     const { wpm, accuracy } = getCurrentStats();
-    results.textContent = `${feedback} WPM: ${wpm}, Précision: ${accuracy}%`;
+    results.textContent = `${feedback} WPM: ${wpm}, Precision: ${accuracy}%`;
 
     currentWordIndex++;
     highlightNextWord();
     inputField.value = "";
 
     if (currentWordIndex >= wordsToType.length) {
-      results.textContent += " Test terminé !";
+      results.textContent += " Test Finished !";
       inputField.disabled = true;
     }
   }
 };
 
-// Prépare le mot courant en le découpant en lettres pour pouvoir les colorer individuellement
 const highlightNextWord = () => {
   const wordElements = wordDisplay.children;
 
@@ -126,7 +123,7 @@ const highlightNextWord = () => {
   }
 };
 
-// Met à jour le surlignage en temps réel des lettres du mot en cours, en tenant compte des espaces
+
 const updateLiveInputHighlight = () => {
   const wordElements = wordDisplay.children;
   const currentSpan = wordElements[currentWordIndex];
@@ -136,17 +133,16 @@ const updateLiveInputHighlight = () => {
   for (let i = 0; i < letterSpans.length; i++) {
     if (i < typed.length) {
       if (typed[i] === letterSpans[i].textContent) {
-        letterSpans[i].style.color = "green"; // Lettre correcte
+        letterSpans[i].style.color = "green"; 
       } else {
-        letterSpans[i].style.color = "red"; // Lettre incorrecte
+        letterSpans[i].style.color = "red"; 
       }
     } else {
-      letterSpans[i].style.color = "white"; // Lettre non encore frappée
+      letterSpans[i].style.color = "white"; 
     }
   }
 };
 
-// Événements
 inputField.addEventListener("keydown", (event) => {
   startTimer();
   updateWord(event);
@@ -156,6 +152,6 @@ inputField.addEventListener("input", updateLiveInputHighlight);
 
 modeSelect.addEventListener("change", () => startTest());
 
-restartButton.addEventListener("click", resetTest); // Ajouter l'écouteur pour le bouton restart
+restartButton.addEventListener("click", resetTest); 
 
 startTest();
