@@ -1,55 +1,89 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-  :root {
+:root {
     --p-primary: #F7E7CE;
-    --p-secondary: #CDB280;
-    --p-color1: white;
-    --p-color2: #3D2B1F;
+    --p-secondary: #C19A6B;
+  }
+body {
+    animation: color-cycle 15s infinite alternate;
+}
+
+@keyframes color-cycle {
+    0% { background-color: black; }
+    50% { background-color: white; }
+    100% { background-color: rgb(206, 206, 231); }
+}
+  
+.container {
+	width: 100%;
+	display: flex;
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+	width: 100%; 
+}
+.description {
+	width: 50%;
+}
+.description h1 {
+	color: var(--p-secondary);
+	gap: 100px;
+	font-size: 60px;
+	margin: 50px;
+}
+  
+  .description {
+	transform: translateX(-100%); 
+	opacity: 0; 
+	animation: slideInFromLeft 1s ease-out 0.5s forwards; 
   }
   
-body {
-    font-family: "Roboto", sans-serif;
-    background-image: url(../img/baymax.png);
-    background-size: cover;
+  @keyframes slideInFromLeft {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+.description .btn {
+	margin: 50px;
+	height: 80px;
+	width: 150px;
+	margin-right: 25px;
+	padding: 10px;
+	border-radius: 20px;
+	background: var(--p-);
+	border: 10px double var(--p-secondary);
+	font-size: 20px;
+	&:hover {
+		background-color: var(--p-primary);
+		color: var(--p-color1);
+		border: 2px solid black;
+	}
+}
+.description a {
+	text-decoration: none;
+	margin: auto;
 }
 
-main {
-    padding: 1rem 8rem ;
+.images {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
-#input-field {
-    width: 30rem;
-    height: 4rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 2rem;
-    border: 1px solid var(--p-secondary);
-    border-radius: 2rem;
-    margin-top: 3rem;
-}
-select {
-    margin-bottom: 5rem;
-}
-
-#results {
-    text-align: center;
-    padding-top: 1rem;
-}
-
-p {
-    font-size: 1.7rem; 
-}
-#restart-button {
-    padding: 1rem 2rem;
-    box-shadow: rgb(189, 189, 189) 5px 5px 5px;
-    background-color: var(--p-primary);
-    border: none;
-    border-radius: 1rem;
-    margin-left: 35rem;
-    margin-top: 5rem;
+.images .images1 img{
+	width: 500px;
+	border-radius: 100px 10px 100px 10px;
+	padding-top: 100px;
+	padding: 10px;
+	margin-left: 100px;
+	
 }

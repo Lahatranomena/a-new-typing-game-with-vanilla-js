@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <title>Typing Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accueil</title>
+	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 
-<header>
-    <nav>
-        <div class="logo">
-            <img src="../img/flash.svg" alt="">
-            <h1>SpeedType</h1>
-        </div>
-        <div class="navbar">
-            <ul>
-                <li><a href="../html/accueil.html">Accueil</a></li>
-                <li><a href="../html/connecter.html">Se connecter</a></li>
-                <li><a href="../html/index.html">Test</a></li>
-                <li><a href="../html/documentation.html">Manuel</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
 <body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="../img/flash.svg" alt="">
+				<h1>SpeedType</h1>
+			</div>
+			<div class="navbar">
+				<ul>
+					<li><a href="../html/index.html">Home</a></li>
+					<li><a href="../html/login.html">Login</a></li>
+					<li><a href="../html/test.html">Test</a></li>
+					<li><a href="../html/manual.html">Manual</a></li>
+				</ul>
 
-    <main>
-        <div class="select">
-            <label for="mode">Select Mode:</label>
-            <select id="mode">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-        </div>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
-        <button id="restart-button">Recommencer</button>
-    </main>
+			</div>
+		</nav>
+		
+	</header>
+<div class="container">
+	<div class="description">
+		<h1>Dactylographie facile, <br> résultats rapides <br>
+		Typing Test</h1>
+		<button class="btn"><a href="login.html">Explore</a></button>
+	</div>
+	<div class="images">
+		<div class="images1">
+			<img src="../img/personnage-removebg-preview.png" alt="">
+		</div>
+		
+	</div>
 
-    <script src="../js/script.js"></script>
-
+</div>
+<script src="../js/accueil.js"></script>
 </body>
 
 </html>
