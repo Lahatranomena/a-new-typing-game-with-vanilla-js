@@ -4,16 +4,15 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --p-primary: #F7E7CE;
+    --p-secondary: #C19A6B;
+  }
+
   body {
     font-family: "Roboto", sans-serif;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
-:root {
-    --p-color1: white;
-    --p-color2: #C8C6D7;
-    --p-primary: #BFACC8;
-    --p-secondary: #4A4063;
-  }
 
 .image_a {
     width: 3rem;
@@ -23,7 +22,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 .image_k {
     width: 3rem;
@@ -34,7 +33,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 .image_n {
     width: 3rem;
@@ -45,7 +44,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 .image_u {
     width: 3rem;
@@ -67,7 +66,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 
 .image_w {
@@ -78,7 +77,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 
 @keyframes image_a {
@@ -107,13 +106,14 @@ input {
     padding-left: 4rem;
     border-radius: 5px;
     border: none;
+    color: white;
     margin-top: 2rem;
-    background-color: #CCCCFF;
+    background-color: var(--p-secondary);
     width: 20vw;
 }
 .input_icons img {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-left: 1.5rem;
     margin-top: 2rem;
     padding-top: 1rem;
