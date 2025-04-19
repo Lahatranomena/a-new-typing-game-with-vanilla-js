@@ -6,6 +6,7 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const restartButton = document.getElementById("restart-button"); // Récupérer le bouton
 
 const words = {
   easy: ["apple ", "banana ", "grape ", "orange ", "cherry "],
@@ -71,6 +72,11 @@ const getCurrentStats = () => {
     wpm: wpm.toFixed(2),
     accuracy: accuracy.toFixed(2)
   };
+};
+
+// Fonction pour réinitialiser l'état du test
+const resetTest = () => {
+  startTest(); // Simplement relancer startTest pour un nouveau test
 };
 
 // Passe au mot suivant dès que l'utilisateur appuie sur espace
@@ -149,5 +155,7 @@ inputField.addEventListener("keydown", (event) => {
 inputField.addEventListener("input", updateLiveInputHighlight);
 
 modeSelect.addEventListener("change", () => startTest());
+
+restartButton.addEventListener("click", resetTest); // Ajouter l'écouteur pour le bouton restart
 
 startTest();

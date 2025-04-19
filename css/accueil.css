@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+    :root {
+		--p-primary: #F7E7CE;
+		--p-secondary: #C19A6B;
+		--p-color1: white;
+		--p-color2: #3D2B1F;
+	  }
+
+
+  
+.container {
+	width: 100%;
+	display: flex;
+	margin-top: 50px;
+	position: relative;
+	width: 100%; 
+}
+.description {
+	width: 50%;
+}
+.description h1 {
+	color: var(--p-color2);
+	gap: 100px;
+	font-size: 60px;
+	margin: 70px;
+}
+  
+  .description {
+	transform: translateX(-100%); 
+	opacity: 0; 
+	animation: slideInFromLeft 1s ease-out 0.5s forwards; 
+  }
+  
+  @keyframes slideInFromLeft {
+	from {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+.description .btn {
+	margin: 50px;
+	height: 80px;
+	width: 150px;
+	margin-right: 25px;
+	padding: 10px;
+	border-radius: 20px;
+	background: var(--p-);
+	border: 10px double var(--p-secondary);
+	font-size: 20px;
+	&:hover {
+		background-color: var(--p-primary);
+		color: var(--p-primary);
+		border: 2px solid var(--p-color2);
+	}
+}
+.description a {
+	text-decoration: none;
+	margin: auto;
+}
+
+.images {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.images .images1 img{
+	width: 500px;
+	border-radius: 100px 10px 100px 10px;
+	padding-top: 100px;
+	padding: 10px;
+	margin-left: 100px;
+	animation-name: uptodown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+
+}
+@keyframes uptodown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-2vh);
+    }
+}
+
+
+
