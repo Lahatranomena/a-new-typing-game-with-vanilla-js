@@ -1,9 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   body {
     font-family: "Roboto", sans-serif;
@@ -58,8 +53,8 @@ input {
     width: 20vw;
 }
 .input_icons img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     margin-left: 1.5rem;
     margin-top: 2rem;
     padding-top: 1rem;

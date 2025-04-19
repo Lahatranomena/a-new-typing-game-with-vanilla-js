@@ -43,3 +43,16 @@ select {
 p {
     font-size: 1.7rem; 
 }
+
+@media screen and (max-width: 1350px) {
+    body {
+        background-repeat: no-repeat;
+    }
+    main {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    #input-field {
+        font-size: 1rem;
+    }
+}

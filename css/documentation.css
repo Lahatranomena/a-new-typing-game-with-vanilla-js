@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+p {
+  font-size: 0.9rem;
+  padding: 1rem;
+  text-align: justify;
+}
+  article {
+    width: 20vw;
+    height: 80vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+article:hover {
+    transform: scale(0.99);
+}
+  .card1 img {
+    width: 10rem;
+    height: auto;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .card2 img {
+    width: 15rem;
+    height: auto;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .card3 img {
+    width: 10rem;
+    height: auto;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .card4 img {
+    width: 10rem;
+    height: auto;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
