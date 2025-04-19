@@ -11,22 +11,13 @@
 		--p-color2: #3D2B1F;
 	  }
 
-body {
-    animation: color-cycle 10s infinite alternate;
-}
 
-@keyframes color-cycle {
-    0% { background-color: var(--p-secondary); }
-	50% {background-color: var(--p-color1)}
-    100% { background-color: var(--p-primary); }
-}
   
 .container {
 	width: 100%;
 	display: flex;
 	margin-top: 50px;
 	position: relative;
-	overflow: hidden;
 	width: 100%; 
 }
 .description {
