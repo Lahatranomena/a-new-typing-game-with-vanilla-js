@@ -23,7 +23,7 @@ p {
 }
   article {
     width: 20vw;
-    height: 70vh;
+    height: 72vh;
     border: 1px solid var(--p-primary);
     box-shadow: rgb(191, 191, 191) 5px 5px 5px;
     background-color: var(--p-primary);

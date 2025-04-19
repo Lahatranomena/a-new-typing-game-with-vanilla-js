@@ -6,7 +6,6 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
-const restartButton = document.getElementById("restart-button"); 
 
 const words = {
   easy: ["apple ", "banana ", "grape ", "orange ", "cherry "],
@@ -14,11 +13,13 @@ const words = {
   hard: ["synchronize ", "complicated ", "development ", "extravagant ", "misconception "]
 };
 
+// Génère un mot aléatoire en fonction du mode sélectionné
 const getRandomWord = (mode) => {
   const wordList = words[mode];
   return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
+// Initialise le test de frappe
 const startTest = (wordCount = 20) => {
   wordsToType.length = 0;
   wordDisplay.innerHTML = "";
@@ -34,8 +35,8 @@ const startTest = (wordCount = 20) => {
 
   wordsToType.forEach((word, index) => {
     const span = document.createElement("span");
-    span.textContent = word + " "; 
-    if (index === 0) span.style.color = "red"; 
+    span.textContent = word + " "; // L'espace est important ici
+    if (index === 0) span.style.color = "red"; // Premier mot mis en évidence
     wordDisplay.appendChild(span);
   });
 
@@ -43,12 +44,14 @@ const startTest = (wordCount = 20) => {
   inputField.value = "";
 };
 
+// Démarre le chronomètre dès que l'utilisateur commence à taper
 const startTimer = () => {
   if (!startTime) startTime = Date.now();
 };
 
+// Calcule et retourne le WPM et la précision
 const getCurrentStats = () => {
-  const elapsedTime = (Date.now() - startTime) / 1000; 
+  const elapsedTime = (Date.now() - startTime) / 1000; // secondes
   const totalCharsTyped = wordsToType
     .slice(0, currentWordIndex + 1)
     .reduce((sum, word) => sum + word.length, 0);
@@ -70,17 +73,7 @@ const getCurrentStats = () => {
   };
 };
 
-const resetTest = () => {
-  startTime = null;
-  currentWordIndex = 0;
-  wordsToType.length = 0;
-  wordDisplay.innerHTML = "";
-  inputField.value = "";
-  inputField.disabled = false;
-  results.textContent = "";
-  startTest(); 
-};
-
+// Passe au mot suivant dès que l'utilisateur appuie sur espace
 const updateWord = (event) => {
   if (event.key === " ") {
     event.preventDefault();
@@ -106,7 +99,7 @@ const updateWord = (event) => {
   }
 };
 
-
+// Prépare le mot courant en le découpant en lettres pour pouvoir les colorer individuellement
 const highlightNextWord = () => {
   const wordElements = wordDisplay.children;
 
@@ -127,7 +120,7 @@ const highlightNextWord = () => {
   }
 };
 
-
+// Met à jour le surlignage en temps réel des lettres du mot en cours, en tenant compte des espaces
 const updateLiveInputHighlight = () => {
   const wordElements = wordDisplay.children;
   const currentSpan = wordElements[currentWordIndex];
@@ -137,16 +130,17 @@ const updateLiveInputHighlight = () => {
   for (let i = 0; i < letterSpans.length; i++) {
     if (i < typed.length) {
       if (typed[i] === letterSpans[i].textContent) {
-        letterSpans[i].style.color = "green"; 
+        letterSpans[i].style.color = "#C19A6B"; // Lettre correcte
       } else {
-        letterSpans[i].style.color = "red"; 
+        letterSpans[i].style.color = "red"; // Lettre incorrecte
       }
     } else {
-      letterSpans[i].style.color = "white"; 
+      letterSpans[i].style.color = "white"; // Lettre non encore frappée
     }
   }
 };
 
+// Événements
 inputField.addEventListener("keydown", (event) => {
   startTimer();
   updateWord(event);
@@ -155,7 +149,5 @@ inputField.addEventListener("keydown", (event) => {
 inputField.addEventListener("input", updateLiveInputHighlight);
 
 modeSelect.addEventListener("change", () => startTest());
-
-restartButton.addEventListener("click", resetTest); 
 
 startTest();

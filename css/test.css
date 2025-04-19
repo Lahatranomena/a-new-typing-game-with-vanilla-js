@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --p-primary: #F7E7CE;
+    --p-secondary: #CDB280;
+    --p-color1: white;
+    --p-color2: #3D2B1F;
+  }
+  
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url(../img/baymax.png);
+    background-size: cover;
+}
+
+main {
+    padding: 1rem 8rem ;
+}
+#input-field {
+    width: 30rem;
+    height: 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+    border-radius: 2rem;
+    margin-top: 3rem;
+}
+select {
+    margin-bottom: 5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+#results {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+p {
+    font-size: 1.7rem;
+}
+#restart-button {
+    padding: 1rem 2rem;
+    box-shadow: rgb(189, 189, 189) 5px 5px 5px;
+    border: none;
+    border-radius: 1rem;
+    margin-left: 35rem;
+    margin-top: 5rem;
+}
