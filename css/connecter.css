@@ -57,7 +57,7 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 2s;
-    background-color: var(--p-color2);
+    background-color: var(--p-primary);
 }
 
 .image_m {

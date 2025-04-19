@@ -28,7 +28,7 @@ main {
     margin-right: auto;
     text-align: center;
     font-size: 2rem;
-    border: 1px solid #848482;
+    border: 1px solid var(--p-secondary);
     border-radius: 2rem;
     margin-top: 3rem;
 }
