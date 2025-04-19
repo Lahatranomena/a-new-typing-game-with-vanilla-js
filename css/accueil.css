@@ -13,13 +13,12 @@
 	  }
   }
 body {
-    animation: color-cycle 15s infinite alternate;
+    animation: color-cycle 10s infinite alternate;
 }
 
 @keyframes color-cycle {
-    0% { background-color: var(--p-primary); }
-    50% { background-color: white; }
-    100% { background-color: var(--p-color2); }
+    0% { background-color: var(--p-secondary); }
+    100% { background-color: var(--p-primary); }
 }
   
 .container {
@@ -34,10 +33,10 @@ body {
 	width: 50%;
 }
 .description h1 {
-	color: var(--p-secondary);
+	color: var(--p-color2);
 	gap: 100px;
 	font-size: 60px;
-	margin: 50px;
+	margin: 70px;
 }
   
   .description {
@@ -68,8 +67,8 @@ body {
 	font-size: 20px;
 	&:hover {
 		background-color: var(--p-primary);
-		color: var(--p-color1);
-		border: 2px solid black;
+		color: var(--p-primary);
+		border: 2px solid var(--p-color2);
 	}
 }
 .description a {
