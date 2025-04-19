@@ -7,6 +7,8 @@
   :root {
     --p-primary: #F7E7CE;
     --p-secondary: #C19A6B;
+    --p-color1: white;
+    --p-color2: #3D2B1F;
   }
 
   main {
@@ -34,27 +36,10 @@ p {
 article:hover {
     transform: scale(0.99);
 }
-  .card1 img {
+  .card img {
     width: 10rem;
     height: auto;
     padding-top: 2rem;
     margin-bottom: 1rem;
-  }
-  .card2 img {
-    width: 15rem;
-    height: auto;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  .card3 img {
-    width: 10rem;
-    height: auto;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  .card4 img {
-    width: 10rem;
-    height: auto;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
+    border-radius: 0.5rem;
   }
